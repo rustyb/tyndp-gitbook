@@ -1,0 +1,22 @@
+{
+    "author": "ENTSO-E",
+    "plugins": ["theme-default"],
+    "pluginsConfig": {
+    	"theme-default": {
+    		"showLevel": true,
+    		"theme": "white", 
+            "family": "sans", 
+            "size": 4
+    	},
+    	"fontsettings": {
+            "family": "sans"
+        }
+    },
+    "pdf": {
+        "toc": false,
+        "pageNumbers": true,
+        "paperSize": "a4",
+        "fontSize": 10
+        }
+   
+}

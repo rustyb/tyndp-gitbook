@@ -1,0 +1,1755 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?aid style="50" type="snippet" readerVersion="6.0" featureSet="513" product="8.0(370)" ?>
+<?aid SnippetType="InCopyInterchange"?>
+<Document DOMVersion="8.0" Self="pandoc_doc">
+    <RootCharacterStyleGroup Self="pandoc_character_styles">
+      <CharacterStyle Self="$ID/NormalCharacterStyle" Name="Default" />
+      <CharacterStyle Self="CharacterStyle/" Name="">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle>
+      <CharacterStyle Self="CharacterStyle/Bold" Name="Bold" FontStyle="Bold">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle>
+      <CharacterStyle Self="CharacterStyle/Italic" Name="Italic" FontStyle="Italic">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle>
+      <CharacterStyle Self="CharacterStyle/Link" Name="Link">
+        <Properties>
+          <BasedOn type="object">$ID/NormalCharacterStyle</BasedOn>
+        </Properties>
+      </CharacterStyle> 
+    </RootCharacterStyleGroup>
+    <RootParagraphStyleGroup Self="pandoc_paragraph_styles">
+      <ParagraphStyle Self="$ID/NormalParagraphStyle" Name="$ID/NormalParagraphStyle"
+          SpaceBefore="6" SpaceAfter="6"> <!-- paragraph spacing -->
+        <Properties>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string"></Leader>
+              <Position type="unit">10</Position> <!-- first tab stop -->
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Blockquote &gt; Paragraph" Name="Blockquote &gt; Paragraph" LeftIndent="10">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList" Name="BulList" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList &gt; Paragraph" Name="BulList &gt; Paragraph" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList &gt; first" Name="BulList &gt; first" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/BulList &gt; first &gt; Paragraph" Name="BulList &gt; first &gt; Paragraph" BulletsAndNumberingListType="BulletList" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+          <TabList type="list">
+            <ListItem type="record">
+              <Alignment type="enumeration">LeftAlign</Alignment>
+              <AlignmentCharacter type="string">.</AlignmentCharacter>
+              <Leader type="string" />
+              <Position type="unit">10</Position>
+            </ListItem>
+          </TabList>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Caption" Name="Caption" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Figure" Name="Figure" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Header1" Name="Header1" LeftIndent="0" PointSize="36">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle>
+      <ParagraphStyle Self="ParagraphStyle/Paragraph" Name="Paragraph" LeftIndent="0">
+        <Properties>
+          <BasedOn type="object">$ID/NormalParagraphStyle</BasedOn>
+        </Properties>
+      </ParagraphStyle> 
+    </RootParagraphStyleGroup>
+    <RootTableStyleGroup Self="pandoc_table_styles">
+      <TableStyle Self="TableStyle/Table" Name="Table" />
+    </RootTableStyleGroup>
+    <RootCellStyleGroup Self="pandoc_cell_styles">
+      <CellStyle Self="CellStyle/Cell" AppliedParagraphStyle="ParagraphStyle/$ID/[No paragraph style]" Name="Cell" />
+    </RootCellStyleGroup>
+  <Story Self="pandoc_story"
+      TrackChanges="false"
+      StoryTitle=""
+      AppliedTOCStyle="n"
+      AppliedNamedGrid="n" >
+    <StoryPreference OpticalMarginAlignment="true" OpticalMarginSize="12" />
+
+<!-- body needs to be non-indented, otherwise code blocks are indented too far -->
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP: mapping the Energy Union</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>“The EU has set itself the targets, by 2030, of reducing domestic greenhouse gas emissions by 40% […], reaching at least 27% energy savings, [and]at least 27% renewable energy (RES) penetration at EU level” </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>(Energy Union Package)</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>ENTSO-E’s 10-year network development plan (TYNDP) is about defining what grid the EU needs to fulfil its climate and energy objectives. The first step is to study how the “27/27/40” goals by 2030 will affect the power sector taking into account its specificities. This is what the TYNDP scenario development is about.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The scenarios used for the 2016 edition of the TYNDP build on the ones used two-years ago. The focus is on the exploration of the 2030 horizon. The data and some assumptions used in the TYNDP 2014 have been updated but the four storylines or “Visions for 2030” have been kept. An additional scenario has been added. The “Expected Progress” scenario looks at 2020 and is an intermediate step before the four Visions for 2030. Several stakeholders including the European Commission asked for this additional scenario.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The 2030 Visions are less forecasts of the future than plausible future states selected as wide ranging possible alternatives so that the pathway realised in reality falls with a high level of certainty within the range described by the Visions. The span of the four Visions is large and meets the various expectations of stakeholders. They differ mainly with respect to:</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; first &gt; Paragraph" NumberingContinue="false">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The trajectory towards the Energy roadmap 2050: Visions 3 and 4 maintaining a regular pace from now until 2050, whereas Visions 1 and 2 assume a slower start before an acceleration after 2030. Fuel and CO2 prices favour coal over gas in Visions 1 and 2 than in Visions 3 and 4.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The consistency of the generation mix development strategy: Visions 1 and 3 are based upon each individual country’s energy policies though still with a minimum harmonised approach across Europe; while Visions 2 and 4 assume a stronger top-down pan-European construction, based on new optimisation methods specifically developed for this TYNDP 2016.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP scenarios development supplying </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>45% to 59%</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> of the total annual demand, depending on the Vision. These are paired with a huge reduction in CO2 emissions (</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>-49% to -78%</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> from the 1990 levels). Compared to the TYNDP 2014, the span of the four Visions is of course reduced, adapted to the Energy Union goals by a today closer horizon.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP2016 scenarios are also designed to reflect increasing shares of active demand users, concerted efforts to steer storage, and synergies of load and generation by prosumers. These aspects are not placed in a separate scenario, but are intrinsic to the four Visions. From Vision 1 to 4 the share of electric vehicles and heat pumps ranges from negligible to 10% of peak load by 2030. Related to this also the potential for demand response rises from 5% in Vision 1 to 20% in Vision 4. The most RES oriented scenario therefore also covers the most means to accommodate RES at local/distribution levels, with TYNDP results showing the impact on the pan-European transmission grid.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In every Vision, the TYNDP 2016 tests whether the European extra-high voltage grid is capable of transferring power from generation facilities to load centres in numerous situations. It identifies the possible bottlenecks and the associated investment needs, assesses the costs and benefits of (jointly) proposed reinforcements, both for the 2020 and 2030 horizons and puts thus every investment project into a common perspective. Note that the TYNDP covers investment projects covered by clear investment decision or approval, as well as proposals which require further analysis. This TYNDP proposes strategies to meet the EU interconnection targets in every member state, which are set at a ratio of interconnectivity over installed generation of 10% by 2020, and 15% while accounting for trade flows and costs by 2030.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 181.44966 -94.71141">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-181.44966 -94.71141" LeftDirection="-181.44966 -94.71141" RightDirection="-181.44966 -94.71141" />
+              <PathPointType Anchor="-181.44966 94.71141" LeftDirection="-181.44966 94.71141" RightDirection="-181.44966 94.71141" />
+              <PathPointType Anchor="181.44966 94.71141" LeftDirection="181.44966 94.71141" RightDirection="181.44966 94.71141" />
+              <PathPointType Anchor="181.44966 -94.71141" LeftDirection="181.44966 -94.71141" RightDirection="181.44966 -94.71141" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -181.44966 -94.71141">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/image1.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>2030 visions</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Figure 1 All 2030 Visions matching the renewables objectives of the electricity system. Note that while in this figure V1-2 and V3-4 seem close, they show a strong differentiation in spatial distribution of generation.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 292.10738 -120.56376">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-292.10738 -120.56376" LeftDirection="-292.10738 -120.56376" RightDirection="-292.10738 -120.56376" />
+              <PathPointType Anchor="-292.10738 120.56376" LeftDirection="-292.10738 120.56376" RightDirection="-292.10738 120.56376" />
+              <PathPointType Anchor="292.10738 120.56376" LeftDirection="292.10738 120.56376" RightDirection="292.10738 120.56376" />
+              <PathPointType Anchor="292.10738 -120.56376" LeftDirection="292.10738 -120.56376" RightDirection="292.10738 -120.56376" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -292.10738 -120.56376">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/image2.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Figure 2 Annual generation in each scenario – breakdown per technology class</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Figure 3 - All visions show different views on which countries become importing or exporting on an annual basis. These differences are even more pronounced when looking at hourly flows. All this impacts the various TYNDP analyses of market integration, RES facilitation, and system reliability.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP paves the way for the Energy Union</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>27% RES in Europe’s energy supply by 2030 means more grid</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>“We concluded that more transmission grid is needed to ensure RES development by 2030; and in this respect they prove relatively cheap, compared to generation and storage” </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>(J. van de Putte, Greenpeace)</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Variable RES uptake is the major driver for grid development by 2030. The generation fleet will experience a major shift in the next decade with the replacement of much of the existing capacities, probably located differently and further from load centres, and involving high RES development. This transformation of the generation infrastructure is the major challenge for the high voltage grid, which must be adapted accordingly.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Local smart grids will help increasing energy efficiency and improve local balance between generation and load. Nevertheless, ENTSO-E forecasts larger, more volatile power flows, over larger distance across Europe, mostly North-South driven by the aforementioned energy transition characterized by the increasing importance of RES development. The power flows are therefore very large in particular in the high-RES Visions 3 and 4.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Most transmission investments needs are linked to RES integration developments, either where direct connection of RES is at stake or because the network section or corridor is a bridge that links RES and load centres. In order to answer these investment needs, the TYNDP 2016 compiles €100 billion investments of pan-European significance, of which €60 billion is for projects already endorsed in national plans and/or intergovernmental agreements by 2030[^2]. The figures are in line with the previous analysis of the TYNDP 2014. This effort is significant for the financial means of TSOs. Still, it only represents about 1.5-2 €/MWh of power consumption in Europe over the 15-year period, i.e. about 2% of the bulk power prices or less than 1% of the total electricity bill.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>This investment scheme has however a significant positive impact on the European social welfare. The created market integration will reduce bulk power prices by 1.5 to 5 €/MWh (depending on fuel and CO2 cost assumptions per scenario). This integration effect is also shown in about 40% avoided congestion-hours across all borders in the most conservative scenario.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In addition, it helps avoid 30 to 90 TWh[^3] of RES spillage globally, reducing it to less than 1% of the total supply. In the 50 to 80% of carbon emission reduction in the electricity sector by 2030 compared to 1990, up to 8% is enabled by the TYNDP infrastructure.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Investing in the project portfolio represents generally a payback for society after 20 years in a rather conservative scenario. The TYNDP 2016 thus confirms the main findings of the previous releases of the TYNDP. It also completes them in new respects by exploring and presenting additional elements.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Footnotes:</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP 2018 is already on the way</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Blockquote &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>“What we assume today sets the frame under which the future is analysed. This is the reason why ENTSOG encourages all stakeholders interested in the future gas and electricity infrastructures and in scenario development to participate to ENTSOs scenario development process.”</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>(Jan Ingwersen, ENTSOG General Manager, 12.05.2016) </Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>An international benchmark in 2015 showed that the European TYNDP stands unique world-wide in terms of number of TSOs collaborating, total number of customers served, methodologies to tackle long-term challenges, and transparency of data and process.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Still, the TYNDP is a living object</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>, bound to evolve to meet stakeholders’ rising expectations. For instance, scenarios storylines will have to answer the still open questions about power system operation and profitability issues that are today answered in a too simplified manner; market modelling will also evolve consistently with raising concerns about security of supply or increasing DSR.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The feedback from the 3rd PCI list selection process in 2017 will also be essential.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The scope of the TYNDP 2018 can already be outlined. It has been discussed in the Network Development Stakeholders Group, and all stakeholders are invited to contribute to it in the consultations organised by ENTSO-E in 2016[^6]:</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; first &gt; Paragraph" NumberingContinue="false">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The two ENTSOs join forces to propose a combined process (scenario building, milestones) to deliver their respective TYNDPs in two-year time. An interlinked gas and electricity modelling shall be finalised in 2016.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP shall more than ever focus on identifying longer-run pan-European relevance system needs (beyond ten-fifteen years).</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP will also feed the PCI selection process, by supplying Cost Benefit Analysis of projects expected to be commissioned in the decade or so (hence focusing on five-ten years horizons).</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The scenario building starteds in May 2016, with a consultation on study horizons and scenarios outline. Recommendation from ACER and EC shall be complied with, especially the articulation with the Mid Term Adequacy forecast by 2025), and the reference to EU PRIMES scenarios for 2030. In order to maximise output and resources utilisation, ENTSO-E recommends to explore new 2040 scenarios and corresponding investment needs; and make projects CBA assessments for two mid-term study years (2025, 2030). The “Scenario development report” will be compiled and consulted first half of 2017.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The identification of system needs would rely basically on pan-European market-studies (in order to derive target capacities, but also indicators about system inertia, ramps, adequacy issues, etc.), prolonged with regional analyses, in particular regional network studies (in order to characterise better every need, possibly analyse the evolution from ten-year to longer run horizons, and possibly propose reinforcement concepts). The “identification of system needs” package (one pan-European report and regional investment plans reports) shall be compiled and consulted end-2017.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The Cost Benefit Analysis is updated in 2016, with a first draft put in consultation by ENTSO-E in Spring and will be submitted to ACER and EC later for validation and implementation for the TYNDP 2018.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The TYNDP 2016 experience shows that the list of projects and target capacities by 2030 are stable enough so that the reference grid, compared to which CBA will be performed. Subject to the dedicated EC guidelines, ENTSO-E proposes to organise two windows for project promoters to ask for TYNDP assessment, one in June 2017 (based on which the reference grid will be set up), and one in December 2017, before the end of the assessment phase in June 2018.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The next steps will be based on feedback received in order to make the TYNDP 2018 best suited for its time.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 398.00000 -131.00000">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-398.00000 -131.00000" LeftDirection="-398.00000 -131.00000" RightDirection="-398.00000 -131.00000" />
+              <PathPointType Anchor="-398.00000 131.00000" LeftDirection="-398.00000 131.00000" RightDirection="-398.00000 131.00000" />
+              <PathPointType Anchor="398.00000 131.00000" LeftDirection="398.00000 131.00000" RightDirection="398.00000 131.00000" />
+              <PathPointType Anchor="398.00000 -131.00000" LeftDirection="398.00000 -131.00000" RightDirection="398.00000 -131.00000" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -398.00000 -131.00000">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/image21.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 231.12329 -103.23288">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-231.12329 -103.23288" LeftDirection="-231.12329 -103.23288" RightDirection="-231.12329 -103.23288" />
+              <PathPointType Anchor="-231.12329 103.23288" LeftDirection="-231.12329 103.23288" RightDirection="-231.12329 103.23288" />
+              <PathPointType Anchor="231.12329 103.23288" LeftDirection="231.12329 103.23288" RightDirection="231.12329 103.23288" />
+              <PathPointType Anchor="231.12329 -103.23288" LeftDirection="231.12329 -103.23288" RightDirection="231.12329 -103.23288" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -231.12329 -103.23288">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/image22.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 378.00000 -214.50000">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-378.00000 -214.50000" LeftDirection="-378.00000 -214.50000" RightDirection="-378.00000 -214.50000" />
+              <PathPointType Anchor="-378.00000 214.50000" LeftDirection="-378.00000 214.50000" RightDirection="-378.00000 214.50000" />
+              <PathPointType Anchor="378.00000 214.50000" LeftDirection="378.00000 214.50000" RightDirection="378.00000 214.50000" />
+              <PathPointType Anchor="378.00000 -214.50000" LeftDirection="378.00000 -214.50000" RightDirection="378.00000 -214.50000" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -378.00000 -214.50000">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/image23.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Footnotes:</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Annex - TYNDP boundaries</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList &gt; first" NumberingContinue="false">
+  <HyperlinkTextSource Self="htss-1" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Ireland - Great-Britain</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-2" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Norway and continent - Great-Britain</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-3" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Nordic - mainland West</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-4" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Nordic - mainland East</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-5" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Baltic states integration</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-6" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Central East integration</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-7" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Iberian peninsula integration</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-8" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Italian peninsula integration</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-9" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>South-East integration</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/BulList">
+  <HyperlinkTextSource Self="htss-10" Name="" Hidden="false">
+    <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Link">
+      <Content>Eastern Balkan border</Content>
+    </CharacterStyleRange>
+  </HyperlinkTextSource>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Ireland - Great-Britain</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Stronger interconnection of the Irish and Great Britain systems, taking account of an overall integration with Continental Europe and the Nordics.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Two 500 MW HVDC interconnectors currently exist between both jurisdictions in Ireland (IE/NI) and GB. Numerous third party future projects are proposed for this border in TYNDP 2016; in general, these projects make use of potential renewable resources within the Island of Ireland to supply GB.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 269.63758 -295.24832">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-269.63758 -295.24832" LeftDirection="-269.63758 -295.24832" RightDirection="-269.63758 -295.24832" />
+              <PathPointType Anchor="-269.63758 295.24832" LeftDirection="-269.63758 295.24832" RightDirection="-269.63758 295.24832" />
+              <PathPointType Anchor="269.63758 295.24832" LeftDirection="269.63758 295.24832" RightDirection="269.63758 295.24832" />
+              <PathPointType Anchor="269.63758 -295.24832" LeftDirection="269.63758 -295.24832" RightDirection="269.63758 -295.24832" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -269.63758 -295.24832">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Ire-GB.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses shows that projects across the Irish Channel have high benefits. Some of the proposed projects are additionally connected to wind energy production, exploiting related benefits.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The detailed TYNDP project CBAs show that the future projects typically provide SEW contributions of 20 – 50 MEuro/year, however, those projects which incorporate large quantities of additional renewable generation provide over 200 MEuro/year.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>For nearly all Visions the energy balances between Ireland, the Republic of Ireland and Great Britain differ, leaving price differences between the three areas. These differences drive the SEW values. In Visions 1 and 2, Great Britain is an area of deficit, but an area of surplus in Visions 3 and 4. The Republic of Ireland is always an area of surplus, except in Vision 2, while Northern Ireland exhibits a similar pattern as Great Britain, but on different level.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The large RES resource of the Island of Ireland, as well as potential large scale demand connections, could drive significant interconnection requirements into the future. The uncertainty over the generation portfolio and demand profile, as well as the lack of a Capacity Analysis curve, means that no definitive 2030 target is provided here.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Great-Britain – Continental Europe and Nordics</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Linking the markets of Great Britain with Continental Europe and the Nordic region.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The generation shift from coal to gas and from thermal to renewables is the main driver for increasing interconnection capacity between the different systems making up the North Sea region. Integrating the British system towards both the Continental and the hydro-based Nordic system, allows to benefit from the complementariness between their generation mix structures. Hence, developing new interconnections across this boundary is important to achieve the desired European market integration as well the integration of renewable energy, preparing for a power system with lower CO2-emissions for most of the Visions. Investments in the boundary play a key role in developing the Northern Seas Offshore Grid Infrastructure and will improve security of supply in the whole region, e.g. during times of low wind, high demand, dry years etc. Additionally, especially HVDC projects add flexibility to the systems due their controllability.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 287.75839 -271.57047">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-287.75839 -271.57047" LeftDirection="-287.75839 -271.57047" RightDirection="-287.75839 -271.57047" />
+              <PathPointType Anchor="-287.75839 271.57047" LeftDirection="-287.75839 271.57047" RightDirection="-287.75839 271.57047" />
+              <PathPointType Anchor="287.75839 271.57047" LeftDirection="287.75839 271.57047" RightDirection="287.75839 271.57047" />
+              <PathPointType Anchor="287.75839 -271.57047" LeftDirection="287.75839 -271.57047" RightDirection="287.75839 -271.57047" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -287.75839 -271.57047">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/GB%20-%20Cont.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses show that projects between the Nordic and the British systems do have high benefits, however also high costs due to the long distances. Between the Continental and the British systems, depending on the Vision, substantial price differences remain,.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In gas before coal market conditions, projects between the systems lead to decreased CO2-emissions. However, in visions with low CO2-prices where coal is cheaper than gas as e.g. in Vision 1, the projects may lead to an increased coal-fired production and subsequently increased CO2-emissions.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 284.61745 -138.92617">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-284.61745 -138.92617" LeftDirection="-284.61745 -138.92617" RightDirection="-284.61745 -138.92617" />
+              <PathPointType Anchor="-284.61745 138.92617" LeftDirection="-284.61745 138.92617" RightDirection="-284.61745 138.92617" />
+              <PathPointType Anchor="284.61745 138.92617" LeftDirection="284.61745 138.92617" RightDirection="284.61745 138.92617" />
+              <PathPointType Anchor="284.61745 -138.92617" LeftDirection="284.61745 -138.92617" RightDirection="284.61745 -138.92617" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -284.61745 -138.92617">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/GB-ContNord%20CA.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Market based capacity analysis performed in the TYNDP2016 shows a significant potential for increasing the capacity between the British, the Nordic and the Continental systems. At the same time, it is important to pay attention to the scenario assumptions. Bringing CO2, oil- , gas-, coal-prices down to 2016-level will influence the SEW-values in a negative direction. Having a look at the Socio-Economic Welfare (SEW) related to increasing boundary capacity, the values of the different visions indicates that the energy-balance is the main driver for price differences hence they drive the SEW-values.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Great Britain is a deficit area in Visions 1 and 2, less in Vision 2 than in Vision 1 given the higher amount of offshore wind, mainly importing from the Continent. In the more greener Visions 3 and 4 Great Britain turns into a surplus area, mainly exporting to the Continent.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Today’s capacity across the boundary is 3GW (blue dot), while the reference capacity of 2030, including all TYNDP16 mid-term and long-term projects, is about 10 GW (green vertical line). Projects not being part of the reference capacity, usually less mature projects or those being built beyond 2030 are indicated to the right hand side from the green vertical line.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Making the balance between social welfare gain and infrastructure investment costs for higher levels of interconnection, the level of interconnection is above 10 GW for all Visions. The present and planned investments show that the reference capacity might be reached by 2030, even though this includes projects of more than 7 GW.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Nordics - Continental Europe West</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Interconnecting the hydro-based Nordic system (NO/SE) with the thermal/nuclear/wind-based Continental system</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The main drivers for investments in this region are to integrate the hydro-based Nordic system with the thermal/nuclear/wind-based Continental system. This will improve security of supply both in Norway/Sweden in dry years as well as for the Continental system in periods with negative power balance (low wind, high demand etc.). Additionally the boundary is important both for the European market integration, facilitating renewable energy and preparing the power system with lower CO2-emission.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses show, that projects between the Nordics and the Continental system do have a reasonable good socio-economical cost/benefit ratio. However, the values are very dependent of the basic price-assumptions (CO2, coal, gas) as well as the energy-balances in each system hence the price-differences between the systems.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In general, projects between the systems leads to decreased CO2-emissions. However, visions with low CO2-prices, may lead to increased coal-fired production and subsequently increase CO2-emissions.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 367.73154 -268.67114">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-367.73154 -268.67114" LeftDirection="-367.73154 -268.67114" RightDirection="-367.73154 -268.67114" />
+              <PathPointType Anchor="-367.73154 268.67114" LeftDirection="-367.73154 268.67114" RightDirection="-367.73154 268.67114" />
+              <PathPointType Anchor="367.73154 268.67114" LeftDirection="367.73154 268.67114" RightDirection="367.73154 268.67114" />
+              <PathPointType Anchor="367.73154 -268.67114" LeftDirection="367.73154 -268.67114" RightDirection="367.73154 -268.67114" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -367.73154 -268.67114">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Nord-Cont.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Market based capacity analysis performed in the TYNDP2016 show the potential for increasing the capacity between the Nordics and the Continental system. At the same time it is important to pay attention to the assumptions. Bringing CO2, oil-, gas-, coal-prices down to 2016-level will influence the SEW-values in a negative direction. Having a look at SEW/GTC-values of the different visions indicates that the energy-balance of the different visions both for the Nordics and Continental countries is the main driver for price differences in the visions hence they drive the SEW-value of connecting the Nordic and continental systems. The Nordic surplus is very high in Vision 2, which results in a high price difference and subsequent high SEW/GTC-value.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 176.37584 -176.13423">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-176.37584 -176.13423" LeftDirection="-176.37584 -176.13423" RightDirection="-176.37584 -176.13423" />
+              <PathPointType Anchor="-176.37584 176.13423" LeftDirection="-176.37584 176.13423" RightDirection="-176.37584 176.13423" />
+              <PathPointType Anchor="176.37584 176.13423" LeftDirection="176.37584 176.13423" RightDirection="176.37584 176.13423" />
+              <PathPointType Anchor="176.37584 -176.13423" LeftDirection="176.37584 -176.13423" RightDirection="176.37584 -176.13423" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -176.37584 -176.13423">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Nord-Cont%20CA.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In general SEW-values for projects towards the Nordics are underestimated, this based on the fact that the studies only take into account an average hydrological year.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Making the balance between social welfare gain and infrastructure investment costs for increasing levels of interconnection, the optimal level of interconnection ranges from 4,5 GW to 7 GW. The present and planned investments show that the target capacity will be reached by 2030.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Nordic/Baltic to Continental Europe East</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Enhancing market flows between North and South.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The driver for investments in this region is to decrease price-differences between the Nordics/Baltics and the Eastern part of the Continental system as well as decrease overall CO2-emissions.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 529.85235 -302.01342">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-529.85235 -302.01342" LeftDirection="-529.85235 -302.01342" RightDirection="-529.85235 -302.01342" />
+              <PathPointType Anchor="-529.85235 302.01342" LeftDirection="-529.85235 302.01342" RightDirection="-529.85235 302.01342" />
+              <PathPointType Anchor="529.85235 302.01342" LeftDirection="529.85235 302.01342" RightDirection="529.85235 302.01342" />
+              <PathPointType Anchor="529.85235 -302.01342" LeftDirection="529.85235 -302.01342" RightDirection="529.85235 -302.01342" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -529.85235 -302.01342">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/NordBalt%20-%20Cont.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses show a large potential for decreased CO2-emissions when integrating Nordics and Baltics towards Continental Europe East. However, the emissions are dependent on the visions. Low CO2-prices leads to increased coal-fired production hence increased emissions.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 176.37584 -176.13423">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-176.37584 -176.13423" LeftDirection="-176.37584 -176.13423" RightDirection="-176.37584 -176.13423" />
+              <PathPointType Anchor="-176.37584 176.13423" LeftDirection="-176.37584 176.13423" RightDirection="-176.37584 176.13423" />
+              <PathPointType Anchor="176.37584 176.13423" LeftDirection="176.37584 176.13423" RightDirection="176.37584 176.13423" />
+              <PathPointType Anchor="176.37584 -176.13423" LeftDirection="176.37584 -176.13423" RightDirection="176.37584 -176.13423" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -176.37584 -176.13423">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Balt-Cont%20CA.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Detailed TYNDP project CBAs show that the average SEW contributions per project across this boundary range from 35 to 80 MEuro/year. This corresponds to about 50 MEuro/year per additional GW of transfer capacity.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Making the balance between social welfare gain and infrastructure investment costs for increasing levels of interconnection, the optimal level of interconnection ranges from 1 GW to 2,5 GW between the Nordics/Baltics and the Continental Europe East. Compared to the present and planned investments this shows a potential for further projects.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Central East integration</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Strengthening the grid in Central Eastern Europe between Germany, Czech, Slovakia and Poland.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The driver for investments in this region is to decrease price-differences between the Poland and the neighbouring countries as well as increase security of supply.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 493.61074 -299.83893">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-493.61074 -299.83893" LeftDirection="-493.61074 -299.83893" RightDirection="-493.61074 -299.83893" />
+              <PathPointType Anchor="-493.61074 299.83893" LeftDirection="-493.61074 299.83893" RightDirection="-493.61074 299.83893" />
+              <PathPointType Anchor="493.61074 299.83893" LeftDirection="493.61074 299.83893" RightDirection="493.61074 299.83893" />
+              <PathPointType Anchor="493.61074 -299.83893" LeftDirection="493.61074 -299.83893" RightDirection="493.61074 -299.83893" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -493.61074 -299.83893">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/central%20east.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses show that high dependency of prices in Poland are strictly relevant with CO2-prices. Self-sufficiency of Poland allow sustain on high level the security of supply at the expense of high energy prices. The emissions are dependent on the visions, where low CO2-prices leads to increased coal-fired production hence increased emissions. Implementation in Poland high efficiency coal technology allow decrease level of emissions significantly.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 176.13423 -176.13423">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-176.13423 -176.13423" LeftDirection="-176.13423 -176.13423" RightDirection="-176.13423 -176.13423" />
+              <PathPointType Anchor="-176.13423 176.13423" LeftDirection="-176.13423 176.13423" RightDirection="-176.13423 176.13423" />
+              <PathPointType Anchor="176.13423 176.13423" LeftDirection="176.13423 176.13423" RightDirection="176.13423 176.13423" />
+              <PathPointType Anchor="176.13423 -176.13423" LeftDirection="176.13423 -176.13423" RightDirection="176.13423 -176.13423" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -176.13423 -176.13423">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/CE%20CA.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Detailed TYNDP project CBAs show that average SEW contributions per project in the perimeter of this boundary range from 40 to 82MEuro/year. This corresponds to about 95 MEuro/year per additional GW of transfer capacity.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Making the balance between societal welfare gain and infrastructure investment costs for increasing levels of interconnection, the optimal level of interconnection ranges from 2,5 GW to 4,5 GW. Compared to the present and planned investments this shows a potential for further projects.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Iberian peninsula integration</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Interconnecting the</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content> </Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Iberian market (MIBEL)with the rest of Europe.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 495.78523 -293.55705">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-495.78523 -293.55705" LeftDirection="-495.78523 -293.55705" RightDirection="-495.78523 -293.55705" />
+              <PathPointType Anchor="-495.78523 293.55705" LeftDirection="-495.78523 293.55705" RightDirection="-495.78523 293.55705" />
+              <PathPointType Anchor="495.78523 293.55705" LeftDirection="495.78523 293.55705" RightDirection="495.78523 293.55705" />
+              <PathPointType Anchor="495.78523 -293.55705" LeftDirection="495.78523 -293.55705" RightDirection="495.78523 -293.55705" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -495.78523 -293.55705">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/MIBEL.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>This boundary appears since many years as one of the most congested in Europe. Main drivers for grid development are i/the integration of MIBEL to European mainland market; ii/ RES integration, especially in the Iberian Peninsula; and iii/ the need for Spain to comply with the EU 10% interconnection rate target by 2020.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The Madrid Declaration signed in March 2015 by the EC and the French, Spanish and Portuguese Governments shows the strong political will to increase the capacity over this boundary by developing 4 projects (one PST, and three additional HVDC interconnections: one subsea and two terrestrial) on top of the HVDC already commissioned in 2015 on the eastern part of the border.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Three multi-terminal projects promoted by non-ENTSOE members are also assessed as future projects in TYNDP2016 although at the time of closure of the consultation phase these projects did not demonstrate compliance with the EC’s draft guidelines for treatment of all promoters; two of them would connect Spain, France and Great Britain and one Spain, France and Italy</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 276.00000 -207.75000">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-276.00000 -207.75000" LeftDirection="-276.00000 -207.75000" RightDirection="-276.00000 -207.75000" />
+              <PathPointType Anchor="-276.00000 207.75000" LeftDirection="-276.00000 207.75000" RightDirection="-276.00000 207.75000" />
+              <PathPointType Anchor="276.00000 207.75000" LeftDirection="276.00000 207.75000" RightDirection="276.00000 207.75000" />
+              <PathPointType Anchor="276.00000 -207.75000" LeftDirection="276.00000 -207.75000" RightDirection="276.00000 -207.75000" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -276.00000 -207.75000">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/MIBEL%20CA.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Grid development through this boundary is driven by the compliance with the target interconnection rate of 10% of installed generation capacity for every EU country by 2020, as current ratio for Spain is still far from the target. Depending on the scenarios, the required capacity for 2030 ranges from 9 GW in Vision 1 to 15 GW in Vision 4.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The four projects mentioned in the Madrid Declaration are expected to increase the capacity between France and Spain to 8 GW and therefore this boundary is still marked as inadequate in all scenarios. Nevertheless this huge investment effort from TSOs improves very much the interconnection ratio of Spain (reaching around 9% in Visions 1 and 2 and around 8% and 6% in Visions 3 and 4 respectively).</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Notwithstanding, looking at the particular geographical position of the region, if the Iberian Peninsula is considered as a whole (Spain and Portugal), the interconnection ratio would be lower.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Italian peninsula integration</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Reinforcing the interconnection at the North-Italian boundary.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The main drivers behind the development of the transmission capacity at the North-Italian boundary concern the exploitation of new generation, mainly located in the North of Germany and France (wind) and in the South of Italy (wind and photovoltaic). The interconnection projects planned on this boundary will enable wider power exchanges and, by this way, will make possible to integrate the above-mentioned generation and the pump storage capacity located in the Alps region. Furthermore, additional links between Italy and North-Africa and between Italy and Montenegro, will contribute as well to the interconnection of the Italian peninsula, by increasing market integration, RES usage and system security.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&#x2028;</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>In addition, the SA.CO.I 3 link connecting Italy and Corsica is of major relevance for the security of supply and market integration within the European system.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 534.44295 -301.04698">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-534.44295 -301.04698" LeftDirection="-534.44295 -301.04698" RightDirection="-534.44295 -301.04698" />
+              <PathPointType Anchor="-534.44295 301.04698" LeftDirection="-534.44295 301.04698" RightDirection="-534.44295 301.04698" />
+              <PathPointType Anchor="534.44295 301.04698" LeftDirection="534.44295 301.04698" RightDirection="534.44295 301.04698" />
+              <PathPointType Anchor="534.44295 -301.04698" LeftDirection="534.44295 -301.04698" RightDirection="534.44295 -301.04698" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -534.44295 -301.04698">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Italy.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses show that highest SEW/GTC rate is achieved in Vision 2, while the lowest is in Vision 3. The higher SEW/GTC values in the V2 and V1 are substantially related to the low CO2 prices used in such scenarios, that lead to a relevant Italian import according mainly to the value of the demand (higher in V2 than in V1). Conversely, in V3 and V4, the higher CO2 prices and the higher RES generation capacity lead to a different use of the Italian Northern boundary, characterised by a lower SEW, but higher RES integration indicators. It is also relevant to highlight that, according to the curves described below, the 2030 reference capacity due to the projects planned on the Northern Italian boundary is quite close to the optimal transmission capacity in the examined scenarios, meaning that any further increase of GTC cannot provide an equivalent increase of SEW.</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>&#x2028;</Content>
+  </CharacterStyleRange>
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Detailed TYNDP project CBAs show that average SEW contributions per project in the perimeter of the Italian Norther boundary range from 35 to 50 MEuro/year, with higher benefits given by the projects which are commissioned first.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 304.67368 -114.06316">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-304.67368 -114.06316" LeftDirection="-304.67368 -114.06316" RightDirection="-304.67368 -114.06316" />
+              <PathPointType Anchor="-304.67368 114.06316" LeftDirection="-304.67368 114.06316" RightDirection="-304.67368 114.06316" />
+              <PathPointType Anchor="304.67368 114.06316" LeftDirection="304.67368 114.06316" RightDirection="304.67368 114.06316" />
+              <PathPointType Anchor="304.67368 -114.06316" LeftDirection="304.67368 -114.06316" RightDirection="304.67368 -114.06316" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -304.67368 -114.06316">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Italy%20CA.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The SEW/GTC curve depicted refers to the impact of reinforcing the interconnection at the North-Italian boundary, the reference capacity reflects the capacity increase on the North Italian Border mainly due to the commissioning of PCI projects. Referring to interconnection Italy Tunisia interconnection promoted by Terna is the project considered mature enough to be included in the reference year 2030 (expected commissioning in 2022). For this reason no related increasing capacities step could be considered concerning this boundary.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Making the balance between societal welfare gain and infrastructure investment costs for increasing levels of interconnection, the optimal level of interconnection are around 14 GW, which is what the TYNDP portfolio of mid-term and long-term projects aims to deliver.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>South East integration</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Strengthening the interconnection between IT/AT/SI/CZ and HR/HU/SK in South East Europe.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The drivers for investments in this region are integrating high potentials of renewables into a relatively sparse network.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 509.55705 -302.49664">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-509.55705 -302.49664" LeftDirection="-509.55705 -302.49664" RightDirection="-509.55705 -302.49664" />
+              <PathPointType Anchor="-509.55705 302.49664" LeftDirection="-509.55705 302.49664" RightDirection="-509.55705 302.49664" />
+              <PathPointType Anchor="509.55705 302.49664" LeftDirection="509.55705 302.49664" RightDirection="509.55705 302.49664" />
+              <PathPointType Anchor="509.55705 -302.49664" LeftDirection="509.55705 -302.49664" RightDirection="509.55705 -302.49664" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -509.55705 -302.49664">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/SE%20Int.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses show the relation between additional capacity increases across these borders and the overall welfare gains as a conservative estimates. Linked with presumed project costs in these areas, the earlier TYNDP studies did not identify relevant investment proposals. Hence, no TYNDP projects are proposed at this stage in the TYNDP.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 176.96842 -176.96842">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-176.96842 -176.96842" LeftDirection="-176.96842 -176.96842" RightDirection="-176.96842 -176.96842" />
+              <PathPointType Anchor="-176.96842 176.96842" LeftDirection="-176.96842 176.96842" RightDirection="-176.96842 176.96842" />
+              <PathPointType Anchor="176.96842 176.96842" LeftDirection="176.96842 176.96842" RightDirection="176.96842 176.96842" />
+              <PathPointType Anchor="176.96842 -176.96842" LeftDirection="176.96842 -176.96842" RightDirection="176.96842 -176.96842" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -176.96842 -176.96842">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Western-balkan_CA.PNG" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Making the balance between societal welfare gain and infrastructure investment costs for increasing levels of interconnection, the optimal level of interconnection is around 5 GW. This is in line with the present transmission capacities across this boundary.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Header1">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Eastern Balkan</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Italic">
+    <Content>Strengthening the interconnection from BG, RO and GR to the rest of South-East Europe.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Strengthening the E→W and the N→S corridors is a prerequisite for market integration and the exploitation of the high RES potential in the East part of South-East Europe. Increase of transfer capacity through the boundary at the West borders of Bulgaria and Romania and the North borders of Greece, will allow the increase of exports to West Europe and, through the Balkan, to Italy both from thermal low cost generation in Bulgaria and Romania and from RES installed in Bulgaria, Romania and Greece, depending on the examined Vision.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>TYNDP findings</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 422.81879 -300.08054">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-422.81879 -300.08054" LeftDirection="-422.81879 -300.08054" RightDirection="-422.81879 -300.08054" />
+              <PathPointType Anchor="-422.81879 300.08054" LeftDirection="-422.81879 300.08054" RightDirection="-422.81879 300.08054" />
+              <PathPointType Anchor="422.81879 300.08054" LeftDirection="422.81879 300.08054" RightDirection="422.81879 300.08054" />
+              <PathPointType Anchor="422.81879 -300.08054" LeftDirection="422.81879 -300.08054" RightDirection="422.81879 -300.08054" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -422.81879 -300.08054">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/Eastern%20Balkan.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>The analyses show that increase of transfer capacity over the examined boundary, results in an increase of societal welfare (ΔSEW) in all visions, up to a certain point where the respective variation curve reaches a saturation region. The highest saturation values for ΔSEW appear in Visions 1 and 4.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Detailed TYNDP project CBAs show that average SEW contributions per project in the perimeter of this boundary range from 20 to 50MEuro/year. This corresponds to about 62 MEuro/year per additional GW of transfer capacity.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Welfare and Capacity</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Figure">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Rectangle Self="uec" StrokeWeight="0" ItemTransform="1.00000 0 0 1.00000 176.21053 -176.96842">
+      <Properties>
+        <PathGeometry>
+          <GeometryPathType PathOpen="false">
+            <PathPointArray>
+              <PathPointType Anchor="-176.21053 -176.96842" LeftDirection="-176.21053 -176.96842" RightDirection="-176.21053 -176.96842" />
+              <PathPointType Anchor="-176.21053 176.96842" LeftDirection="-176.21053 176.96842" RightDirection="-176.21053 176.96842" />
+              <PathPointType Anchor="176.21053 176.96842" LeftDirection="176.21053 176.96842" RightDirection="176.21053 176.96842" />
+              <PathPointType Anchor="176.21053 -176.96842" LeftDirection="176.21053 -176.96842" RightDirection="176.21053 -176.96842" />
+            </PathPointArray>
+          </GeometryPathType>
+        </PathGeometry>
+      </Properties>
+      <Image Self="ue6" ItemTransform="1.00000 0 0 1.00000 -176.21053 -176.96842">
+        <Properties>
+          <Profile type="string">
+            $ID/Embedded
+          </Profile>
+        </Properties>
+        <Link Self="ueb" LinkResourceURI="file:../images/CSE_CA.png" />
+      </Image>
+    </Rectangle>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Caption">
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="CharacterStyle/Bold">
+    <Content>Interconnection target for 2030</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Making the balance between societal welfare gain and infrastructure investment costs for increasing levels of interconnection, the optimal level of interconnection ranges from 5 GW to 8.5 GW.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+<Br />
+<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/Paragraph">
+  <CharacterStyleRange AppliedCharacterStyle="$ID/NormalCharacterStyle">
+    <Content>Compared to the present and planned investments this shows that in most of the Visions, their implementation will result in a transmission network that is adequate to cope with the expected power flows.</Content>
+  </CharacterStyleRange>
+</ParagraphStyleRange>
+
+  </Story>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./22-eastern-balkan.md" Name="link" DestinationURL="./22-eastern-balkan.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-10" Name="./22-eastern-balkan.md" Source="htss-10" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./22-eastern-balkan.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./21-south-east.md" Name="link" DestinationURL="./21-south-east.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-9" Name="./21-south-east.md" Source="htss-9" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./21-south-east.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./20-italian.md" Name="link" DestinationURL="./20-italian.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-8" Name="./20-italian.md" Source="htss-8" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./20-italian.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./19-iberian.md" Name="link" DestinationURL="./19-iberian.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-7" Name="./19-iberian.md" Source="htss-7" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./19-iberian.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./18-cei.md" Name="link" DestinationURL="./18-cei.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-6" Name="./18-cei.md" Source="htss-6" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./18-cei.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./17-baltic.md" Name="link" DestinationURL="./17-baltic.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-5" Name="./17-baltic.md" Source="htss-5" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./17-baltic.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./16-nordic-east.md" Name="link" DestinationURL="./16-nordic-east.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-4" Name="./16-nordic-east.md" Source="htss-4" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./16-nordic-east.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./15-nordic-west.md" Name="link" DestinationURL="./15-nordic-west.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-3" Name="./15-nordic-west.md" Source="htss-3" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./15-nordic-west.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./14-nordic-gb.md" Name="link" DestinationURL="./14-nordic-gb.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-2" Name="./14-nordic-gb.md" Source="htss-2" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./14-nordic-gb.md</Destination>
+    </Properties>
+  </Hyperlink>
+  <HyperlinkURLDestination Self="HyperlinkURLDestination/./13-ie-gb.md" Name="link" DestinationURL="./13-ie-gb.md" DestinationUniqueKey="1" />
+  <Hyperlink Self="uf-1" Name="./13-ie-gb.md" Source="htss-1" Visible="true" DestinationUniqueKey="1">
+    <Properties>
+      <BorderColor type="enumeration">Black</BorderColor>
+      <Destination type="object">HyperlinkURLDestination/./13-ie-gb.md</Destination>
+    </Properties>
+  </Hyperlink>
+</Document>
